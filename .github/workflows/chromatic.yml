@@ -2,17 +2,11 @@ name: Chromatic
 
 on:
   pull_request:
-    paths:
-      - '**/*.tsx'
-      - '**/*.ts'
-      - '**/*.mdx'
-      - '.storybook/**'
-      - 'package.json'
-      - 'package-lock.json'
   workflow_dispatch:
 
 jobs:
   chromatic:
+    if: ${{ secrets.CHROMATIC_PROJECT_TOKEN != '' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

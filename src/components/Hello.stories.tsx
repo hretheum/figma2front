@@ -7,5 +7,5 @@ const meta: Meta<typeof Hello> = {
 }
 export default meta
 
-export const Default: StoryObj<typeof Hello> = { args: { name: 'Design System' } }
+export const Default: StoryObj<typeof Hello> = { args: { name: 'Chromatic Test' } }
 
