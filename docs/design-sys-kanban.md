@@ -4,6 +4,34 @@ Wariant realizacji: ręczny push z pluginu Tokens Studio w Figmie → automerge 
 
 ---
 
+## Blok -1: Boilerplate frontendu
+Cel namacalny: czysty Storybook buduje się lokalnie i w CI; bazowy stack gotowy (React + Vite + TS + pnpm + ESLint/Prettier + Vitest + Storybook 8)
+
+- [ ] Zadanie -1.1: Wybór stacku i narzędzi (spis decyzji)
+  - Metryki: README uzupełnione o stack; wersja Node zdefiniowana (.nvmrc/volta)
+  - Walidacja: node -v zgodny; pnpm -v działa
+- [ ] Zadanie -1.2: Inicjalizacja repo (package.json, skrypty dev/build/test/lint)
+  - Metryki: skrypty obecne i działają
+  - Walidacja: pnpm build kończy się exit 0
+- [ ] Zadanie -1.3: Integracja Vite + React + TS + ESLint/Prettier
+  - Metryki: lint przechodzi; typy bez błędów
+  - Walidacja: pnpm lint i pnpm type-check → exit 0
+- [ ] Zadanie -1.4: Instalacja i konfiguracja Storybook 8 (builder Vite) + przykładowe stories
+  - Metryki: static Storybook build artefakt generuje się
+  - Walidacja: pnpm storybook:build → exit 0; folder storybook-static istnieje
+- [ ] Zadanie -1.5: Szkielet CI (GitHub Actions): install cache → build → storybook:build
+  - Metryki: workflow przechodzi na PR
+  - Walidacja: green check w PR; czas jobu < 10 min
+- [ ] Zadanie -1.6: Konfiguracja Chromatic (opcjonalnie)
+  - Metryki: build pojawia się w Chromatic; link w logach
+  - Walidacja: CHROMATIC_PROJECT_TOKEN w secrets; run zakończony sukcesem
+- [ ] Zadanie -1.7: Konfiguracja Renovate/Dependabot
+  - Metryki: pierwszy PR z aktualizacją zależności
+  - Walidacja: PR utworzony w ciągu 24h od włączenia
+
+Definition of Done (blok): czysty Storybook buduje się lokalnie i w CI na PR.
+
+
 ## Blok 0: Prerekwizyty i bezpieczeństwo
 Cel namacalny: środowisko gotowe do bezpiecznego uruchomienia całego łańcucha
 
