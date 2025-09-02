@@ -23,5 +23,5 @@ jobs:
       - name: Install deps
         run: npm ci
       - name: Publish to Chromatic
-        run: npx chromatic --project-token ${{ secrets.CHROMATIC_PROJECT_TOKEN }} --exit-zero-on-changes
+        run: npx chromatic --project-token ${{ secrets.CHROMATIC_PROJECT_TOKEN }} --build-script-name=storybook:build --exit-once-uploaded
 
