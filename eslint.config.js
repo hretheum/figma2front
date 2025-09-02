@@ -6,6 +6,7 @@ import jsxA11y from 'eslint-plugin-jsx-a11y'
 import importPlugin from 'eslint-plugin-import'
 import tseslint from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
+import globals from 'globals'
 
 export default [
   js.configs.recommended,
@@ -18,6 +19,9 @@ export default [
         sourceType: 'module',
         ecmaFeatures: { jsx: true },
         project: false,
+      },
+      globals: {
+        ...globals.browser,
       },
     },
     plugins: {
