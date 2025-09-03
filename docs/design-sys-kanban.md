@@ -13,16 +13,16 @@ Cel namacalny: czysty Storybook buduje się lokalnie i w CI; bazowy stack gotowy
 - [ ] Zadanie -1.2: Inicjalizacja repo (package.json, skrypty dev/build/test/lint)
   - Metryki: skrypty obecne i działają
   - Walidacja: pnpm build kończy się exit 0
-- [ ] Zadanie -1.3: Integracja Vite + React + TS + ESLint/Prettier
+- [x] Zadanie -1.3: Integracja Vite + React + TS + ESLint/Prettier
   - Metryki: lint przechodzi; typy bez błędów
   - Walidacja: pnpm lint i pnpm type-check → exit 0
-- [ ] Zadanie -1.4: Instalacja i konfiguracja Storybook 8 (builder Vite) + przykładowe stories
+- [x] Zadanie -1.4: Instalacja i konfiguracja Storybook 8 (builder Vite) + przykładowe stories
   - Metryki: static Storybook build artefakt generuje się
   - Walidacja: pnpm storybook:build → exit 0; folder storybook-static istnieje
-- [ ] Zadanie -1.5: Szkielet CI (GitHub Actions): install cache → build → storybook:build
+- [x] Zadanie -1.5: Szkielet CI (GitHub Actions): install cache → build → storybook:build
   - Metryki: workflow przechodzi na PR
   - Walidacja: green check w PR; czas jobu < 10 min
-- [ ] Zadanie -1.6: Konfiguracja Chromatic (opcjonalnie)
+- [x] Zadanie -1.6: Konfiguracja Chromatic (opcjonalnie)
   - Metryki: build pojawia się w Chromatic; link w logach
   - Walidacja: CHROMATIC_PROJECT_TOKEN w secrets; run zakończony sukcesem
 - [ ] Zadanie -1.7: Konfiguracja Renovate/Dependabot
@@ -38,7 +38,7 @@ Cel namacalny: środowisko gotowe do bezpiecznego uruchomienia całego łańcuch
 - [ ] Zadanie 0.1: Zdefiniuj i zapisz sekrety w CI (NPM_TOKEN, GITHUB_TOKEN)
   - Metryki sukcesu: sekrety widoczne w CI; testowy job ma do nich dostęp
   - Walidacja: uruchomić dry-run job w CI, sprawdzić echo maskowania secretów i exit code=0
-- [ ] Zadanie 0.2: Konfiguracja branch protection dla main (wymagane status checks)
+- [x] Zadanie 0.2: Konfiguracja branch protection dla main (wymagane status checks)
   - Metryki sukcesu: reguły aktywne; PR bez zielonych checków nie może się zmergować
   - Walidacja: próbny PR z celowym fail check → merge zablokowany
 - [ ] Zadanie 0.3: Ustal nazwę i ścieżkę źródeł tokenów (np. tokens/raw/**) syncowanych przez Tokens Studio
@@ -101,10 +101,10 @@ Cel namacalny: automatyczny PR w frontend z bumpem wersji; zbudowany Storybook i
 - [ ] Zadanie 3.1: Włącz Renovate/Dependabot dla @org/design-tokens (z autolabelem i harmonogramem)
   - Metryki: PR pojawia się < 15 min po publikacji paczki
   - Walidacja: publikacja patch/minor/major → każdy scenariusz generuje PR
-- [ ] Zadanie 3.2: CI na PR – install → build app → build storybook (statyczny)
+- [x] Zadanie 3.2: CI na PR – install → build app → build storybook (statyczny)
   - Metryki: build Storybooka < 8 min; bez błędów; artefakt statyczny gotowy
   - Walidacja: logi CI; artefakt do pobrania
-- [ ] Zadanie 3.3: Integracja Chromatic (lub hosting preview) – automatyczny run na PR
+- [x] Zadanie 3.3: Integracja Chromatic (lub hosting preview) – automatyczny run na PR
   - Metryki: run utworzony; różnice wizualne zmapowane do zmian tokenów; brak flaky
   - Walidacja: link do Chromatic z PR; przegląd diffów
 - [ ] Zadanie 3.4: Reguły auto-merge PR (opcjonalnie): auto-approve jeśli tylko tokeny i testy OK
