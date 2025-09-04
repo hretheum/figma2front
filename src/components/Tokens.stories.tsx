@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import type { CSSProperties } from 'react';
 import tokens from '@hretheum/tokenz/tokens.json';
 
 const meta: Meta = {
@@ -12,7 +13,7 @@ type Story = StoryObj;
 export const BrandColor: Story = {
   render: () => {
     const brand = tokens.values.color.brand.value as string;
-    const boxStyle: React.CSSProperties = {
+    const boxStyle: CSSProperties = {
       width: 120,
       height: 60,
       backgroundColor: brand,
