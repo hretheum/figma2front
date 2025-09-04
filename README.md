@@ -61,5 +61,8 @@ Linki pomocnicze
 - Pierwsze uruchomienie
   - onlyChanged: false oraz exitZeroOnChanges: true w opcjach akcji pomagają wstępnie ustalić baseline
 
+## Design tokens – użycie paczki
+Szczegóły i przykłady: zobacz docs/tokens-usage.md.
+
 ## Licencja
 TBD
