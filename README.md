@@ -2,19 +2,19 @@
 
 Frontend repo consuming @org/design-tokens with auto-rebuild Storybook and MCP integration.
 
-## Status projektu (2025-09-03)
-- CI (GitHub Actions): zielony na PR i push na main
-  - Build aplikacji i statyczny build Storybooka
-  - Check wymagany: build
+## Status projektu (2025-09-04)
+- Toolchain: Storybook 9.1.4 + Vite 7.1.4, Vitest 3.x, @testing-library/react 16.x
+- CI (GitHub Actions): zielony na PR i push na main (po migracji SB9 + Vite7)
+  - build: OK (app build + statyczny Storybook)
+  - chromatic: OK (UI Tests + Storybook Publish)
 - Chromatic: zintegrowany przez chromaui/action@v1
-  - Check wymagany: chromatic (UI Tests + Storybook Publish)
   - Uprawnienia w workflow ustawione (checks/pull-requests: write)
-  - Pełna historia gita (fetch-depth: 0) dla prawidłowego baseline
+  - Pełna historia gita (fetch-depth: 0) dla baseline
 - Ochrona gałęzi main (branch protection)
   - Wymagane status checks: build + chromatic
   - Enforce admins: włączone
 - Secrets
-  - CHROMATIC_PROJECT_TOKEN: ustawiony
+  - CHROMATIC_PROJECT_TOKEN: ustawiony w repo (Actions secret)
 
 Linki pomocnicze
 - Ostatni Storybook Publish (z PR): patrz check "Storybook Publish" w zakładce Checks PR
