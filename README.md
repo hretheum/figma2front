@@ -17,8 +17,11 @@ Frontend repo consuming @org/design-tokens with auto-rebuild Storybook and MCP i
   - CHROMATIC_PROJECT_TOKEN: ustawiony w repo (Actions secret)
 
 Linki pomocnicze
-- Ostatni Storybook Publish (z PR): patrz check "Storybook Publish" w zakładce Checks PR
-- Panel Chromatic (builds): https://www.chromatic.com/build?appId=68b737f11f2af63c17dc19ff
+- Chromatic (ostatni run w Actions): https://github.com/hretheum/figma2front/actions/runs/17465173636
+- Chromatic (ostatni build – szczegóły): https://www.chromatic.com/build?appId=68b737f11f2af63c17dc19ff&number=13
+- Chromatic (podgląd Storybooka – ostatni build): https://68b737f11f2af63c17dc19ff-vcbjbceftf.chromatic.com/
+- Chromatic (bezpośrednie story Design Tokens/Brand): https://68b737f11f2af63c17dc19ff-vcbjbceftf.chromatic.com/iframe.html?id=design-tokens-brand--brand-color
+- Panel Chromatic (wszystkie buildy): https://www.chromatic.com/build?appId=68b737f11f2af63c17dc19ff
 
 ## Jak uruchomić lokalnie
 - Node 20
@@ -60,6 +63,9 @@ Linki pomocnicze
   - workflow ma permissions: checks: write i pull-requests: write
 - Pierwsze uruchomienie
   - onlyChanged: false oraz exitZeroOnChanges: true w opcjach akcji pomagają wstępnie ustalić baseline
+
+## Design tokens – użycie paczki
+Szczegóły i przykłady: zobacz docs/tokens-usage.md.
 
 ## Licencja
 TBD
