@@ -36,6 +36,9 @@ Linki pomocnicze
   - chromatic (wizualne testy + publikacja Storybook)
 - PR bez zielonych checków nie może być zmergowany (wymusza branch protection)
 
+## Kanban
+- Zobacz aktualną tablicę: docs/KANBAN.md
+
 ## Następne sugerowane kroki
 1) Auto-merge (opcjonalnie)
    - Włączyć w repo Settings → Pull Requests → Allow auto-merge
