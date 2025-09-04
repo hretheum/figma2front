@@ -12,7 +12,7 @@ type Story = StoryObj;
 
 export const BrandColor: Story = {
   render: () => {
-    const brand = tokens.values.color.brand.value as string;
+    const brand = (tokens as any)?.values?.color?.brand?.value || '#1D4ED8';
     const boxStyle: CSSProperties = {
       width: 120,
       height: 60,
