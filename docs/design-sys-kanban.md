@@ -35,9 +35,9 @@ Definition of Done (blok): czysty Storybook buduje się lokalnie i w CI na PR.
 ## Blok 0: Prerekwizyty i bezpieczeństwo
 Cel namacalny: środowisko gotowe do bezpiecznego uruchomienia całego łańcucha
 
-- [ ] Zadanie 0.1: Zdefiniuj i zapisz sekrety w CI (NPM_TOKEN, GITHUB_TOKEN)
+- [x] Zadanie 0.1: Zdefiniuj i zapisz sekrety w CI (NPM_TOKEN, GITHUB_TOKEN)
   - Metryki sukcesu: sekrety widoczne w CI; testowy job ma do nich dostęp
-  - Walidacja: uruchomić dry-run job w CI, sprawdzić echo maskowania secretów i exit code=0
+  - Walidacja: uruchomić dry-run job w CI, sprawdzić echo maskowania secretów i exit code=0 (NPM_TOKEN dodany, publikacja 0.0.1 działa)
 - [x] Zadanie 0.2: Konfiguracja branch protection dla main (wymagane status checks)
   - Metryki sukcesu: reguły aktywne; PR bez zielonych checków nie może się zmergować
   - Walidacja: próbny PR z celowym fail check → merge zablokowany
@@ -78,6 +78,8 @@ Definition of Done (blok): testowy PR z TS automatycznie łączy się do main po
 ## Blok 2: Build i publikacja paczki design-tokens
 Cel namacalny: po merge na main publikowana jest nowa wersja @org/design-tokens w rejestrze
 
+Stan obecny: opublikowano minimalną wersję `@hretheum/tokenz@0.0.1` (workflow publish.yml); wersjonowanie/automatyzacja (Changesets/semantic-release) do ustalenia.
+
 - [ ] Zadanie 2.1: Zdefiniuj transformacje build (CSS vars, TS exports, opcjonalnie SCSS)
   - Metryki: dist/ generuje oczekiwane pliki; liczba i rozmiar artefaktów zgodne ze specyfikacją
   - Walidacja: lokalny/CI build → artefakty dostępne i poprawne (lint/format)
@@ -110,9 +112,9 @@ Cel namacalny: automatyczny PR w frontend z bumpem wersji; zbudowany Storybook i
 - [ ] Zadanie 3.4: Reguły auto-merge PR (opcjonalnie): auto-approve jeśli tylko tokeny i testy OK
   - Metryki: PR merge bez ręcznej interwencji w “niski ryzyko” (patch/minor zgodnie z polityką)
   - Walidacja: kontrolny PR patch → auto-merge; major → wymaga review
-- [ ] Zadanie 3.5: Po merge – automatyczny deploy/host Storybook na main
-  - Metryki: deploy < 10 min; URL publiczny/chroniony dostępny
-  - Walidacja: wejście na URL; wersja commit SHA i data last build widoczne
+- [x] Zadanie 3.5: Po merge – automatyczny deploy/host Storybook na main (Chromatic on push)
+  - Metryki: deploy < 10 min; URL publiczny/chroniony dostępny (Chromatic preview)
+  - Walidacja: wejście na URL; wersja commit SHA i data last build widoczne (linki w README)
 
 Definition of Done (blok): PR z bumpem wersji powstaje i przechodzi CI; Storybook preview dostępny; po merge main – Storybook zdeployowany
 

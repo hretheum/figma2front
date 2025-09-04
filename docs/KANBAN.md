@@ -5,11 +5,10 @@
 ## Todo
 - Konfiguracja Renovate/Dependabot pod nowy toolchain (harmonogram, grupowanie bumpów)
 - Weryfikacja e2e: uruchomić przykładowe stories i potwierdzić brak regresji UI (Chromatic baseline aktualny)
-- Dokumentacja: krótkie How-to w docs/ (dodawanie komponentu + workflow Chromatic)
-- Ustalić strategię dla CI na main: czy chcemy publikować Storybook także na main (Vercel/Netlify) jako stable URL
 
 ## In progress
 - Monitorowanie CI na main po migracji SB9 + Vite7
+- Stabilizacja baseline Chromatic po integracji tokenów (obserwacja kolejnych buildów)
 
 ## Done
 - Włączone Allow auto-merge i delete branch on merge (repo settings)
@@ -19,3 +18,9 @@
 - Zbiorczy PR aktualizacyjny (#16) — zmergowany
 - Migracja Storybook 9 + Vite 7 (#17) — zmergowany
 - Aktualizacja README statusu (#18) — zmergowany
+- Utworzone i opublikowane osobne repo tokenów: `hretheum/tokenz` (v0.0.1) + dodany sekret NPM_TOKEN
+- Integracja paczki `@hretheum/tokenz` we frontendzie (figma2front) + dokument `docs/tokens-usage.md`
+- Dodany przykładowy story `Design Tokens/Brand` w Storybooku (import z paczki tokenów)
+- Włączony trigger Chromatic także na `push` do `main` (automatyczna publikacja po merge)
+- Usunięty lokalny `tokens.json` z figma2front (źródło prawdy w repo tokenz)
+- Zaktualizowane linki Chromatic w README do najnowszego builda
