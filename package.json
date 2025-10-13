@@ -30,7 +30,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
-    "@typescript-eslint/parser": "^8.42.0",
+    "@typescript-eslint/parser": "^8.46.0",
     "@vitejs/plugin-react": "^5.0.2",
     "chromatic": "^13.1.4",
     "eslint": "^9.9.0",
